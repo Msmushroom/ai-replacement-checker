@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>今天被AI替代了吗</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <h1>《今天被AI替代了吗》</h1>
+    </header>
+
+    <section class="content">
+      <div id="controlsPanel" class="controls">
+        <p class="intro input-intro">人类存续辩护</p>
+        <p class="prompt-example">例如：今天手动改了17次表格格式，只为让它看起来像是人做的。</p>
+        <input id="sentence" maxlength="120" placeholder="空着也行，系统会礼貌地替你判定命运。" />
+        <button id="checkBtn" type="button">启动替代检测</button>
+        <p id="loadingLine" class="loading hidden" aria-live="polite"></p>
+      </div>
+
+      <section id="resultCard" class="result-card hidden" aria-live="polite">
+      <p class="badge">> terminal mode:diagnostic report</p>
+      <p id="modeLine" class="mode-line"></p>
+
+      <div class="impact-wrap">
+        <p class="impact-label">本次命运判定</p>
+        <p id="impactValue" class="impact-value digit"></p>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric-label">AI替代率</span>
+          <span id="rateValue" class="metric-value digit"></span>
+        </div>
+        <div class="metric">
+          <span class="metric-label">剩余人类性</span>
+          <span id="humanValue" class="metric-value digit human"></span>
+        </div>
+      </div>
+
+      <div class="progress-wrap">
+        <p>AI接管进度条</p>
+        <div class="progress-track">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote-label">系统备注</p>
+        <p id="quoteBox" class="quote-text"></p>
+      </div>
+
+        <div class="result-actions">
+          <button id="rerunBtn" type="button">执行新一轮检测</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
