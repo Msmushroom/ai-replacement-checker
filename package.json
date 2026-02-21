@@ -1,0 +1,15 @@
+{
+  "name": "ai-replacement-checker",
+  "version": "1.0.0",
+  "description": "中文黑色幽默 AI 替代率检查器",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:sanity": "node scripts/sanity-test.js",
+    "test:style": "node scripts/style-proof.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "puppeteer": "^24.1.0"
+  }
+}
